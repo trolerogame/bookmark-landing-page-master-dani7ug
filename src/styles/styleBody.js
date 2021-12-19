@@ -66,3 +66,22 @@ export const InfoFooter = styled.footer`
         padding: 20px 100px;
     }
 `
+
+export const ContainIllustrator = styled.div`
+    text-align: center;
+    img{
+        width: 350px;
+        height: 350px;
+        object-fit: cover;
+    }
+    p{
+        color:hsl(229, 31%, 21%);
+    }
+    h2{
+        font-size:25px;
+    }
+    @media (min-width: 762px){
+        display:flex;
+        text-align: start;
+    }
+`
