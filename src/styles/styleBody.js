@@ -1,56 +1,68 @@
-import styled from 'styled-components'
+import styled,{css,createGlobalStyle} from 'styled-components'
 
-export const InfoHeader = styled.header`
-    display:grid;
-    grid-template-columns: 100%;
-    grid-template-rows:25% 25% 50%;
-    background-color:hsl(231, 69%, 60%);
-    opacity: .5;
-    margin: 10px 100px;
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    button{
-        display:none; 
-    }
-`
-
-export const ContainInfoHeader = styled.div`
-    display:flex;
-    flex-direction: column;
-    p{
-        margin:10px 0;
-        border-bottom:1px solid #999;
-    }
-    p:first-child{
-        border-top:1px solid #999;
+export const GlobalStyle = createGlobalStyle`
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Lato', sans-serif;
+        font-family: 'Rubik', sans-serif;
+        font-family: 'Source Sans Pro', sans-serif;
     }
 `
 export const ButtonRed = styled.button`
     border:none;
     color:hsl(0, 94%, 66%);
+    background:hsl(0, 94%, 66%);
     border-radius:5px;
     color:#fff;
     text-align:center;
     height:30px;
     padding:0 10px;
+    cursor: pointer;
 `
-export const infoFooter = styled.footer`
+export const InfoFooter = styled.footer`
     display:flex;
     flex-direction: column;
     align-items: center;
-    background:hsl(229, 31%, 21%);
+    background:hsl(229, 31%, 21%); 
+    padding:30px 0;
     p{
-        color:hsl(229, 8%, 60%);
+        color:#fff;
         margin:20px 0;
+        cursor:pointer;
+        transition: all .1s linear;
+        text-align: center;
+    }
+    #info{
+        margin:20px 0;
+    }
+    p:hover{
+        color:hsl(0, 94%, 66%);
+    }
+    img{
+        margin:0 15px;
+        cursor:pointer;
+        padding:3px;
     }
     @media (min-width: 768px){
         p{
             margin:0 20px;
+            display:inline;
         }
+
+        #info{
+            display:flex;
+            align-items: center;
+        }
+
+        img{
+            margin:0 10px;
+        }
+
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        margin: 10px 100px;
+        padding: 20px 100px;
     }
 `
