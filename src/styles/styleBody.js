@@ -1,4 +1,4 @@
-import styled,{css,createGlobalStyle} from 'styled-components'
+import styled,{createGlobalStyle} from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
     body{
@@ -12,10 +12,9 @@ export const GlobalStyle = createGlobalStyle`
 `
 export const ButtonRed = styled.button`
     border:none;
-    color:hsl(0, 94%, 66%);
-    background:hsl(0, 94%, 66%);
+    color:${props => props.color == '#f2f2f2' ? '#111' : '#fff'};
+    background:${props => props.color || 'hsl(0, 94%, 66%)'};
     border-radius:5px;
-    color:#fff;
     text-align:center;
     height:30px;
     padding:0 10px;
@@ -68,20 +67,53 @@ export const InfoFooter = styled.footer`
 `
 
 export const ContainIllustrator = styled.div`
+    margin:50px 30px;
     text-align: center;
     img{
         width: 350px;
-        height: 350px;
+        height: 250px;
         object-fit: cover;
     }
     p{
         color:hsl(229, 31%, 21%);
+        font-weight: 500;
+        font-size:18px;
     }
     h2{
-        font-size:25px;
+        font-size:26px;
     }
+    button{
+        height:40px;
+        margin:0 10px;
+    }
+    #containButtons{
+        display:flex;
+        margin:20px 0;
+        justify-content:center;
+    }
+
     @media (min-width: 762px){
         display:flex;
         text-align: start;
+    }
+`
+export const ContainIllustration = styled.div`
+    position: relative;
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+`
+
+export const TextExplain = styled.div`
+    display:flex;
+    flex-direction: column;
+    margin:30px 30px;
+    margin-top:90px;
+    text-align: center;
+    p{
+        margin-top:0px;
+    }
+    h2{
+        font-size:25px;
     }
 `
