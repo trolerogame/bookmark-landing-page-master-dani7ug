@@ -57,17 +57,17 @@ const Body = () => {
                 <CartExtension
                     search='Chrome'
                     version='62'
-                    image='../../public/logo-chrome.svg'
+                    image='./logo-chrome.svg'
                 />
                 <CartExtension
                     search='Firefox'
                     version='55'
-                    image='../../public/logo-firefox.svg'
+                    image='./logo-firefox.svg'
                 />
                 <CartExtension
                     search='Opera'
                     version='46'
-                    image='../../public/logo-opera.svg'
+                    image='./logo-opera.svg'
                 />
             </ContainCart>
             {/* Questions */}
