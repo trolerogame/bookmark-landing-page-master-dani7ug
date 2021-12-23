@@ -1,6 +1,7 @@
 {
   "name": "bookmark-landing-page-master",
   "version": "0.0.0",
+  "homepage": "https://trolerogame.github.io/bookmark-landing-page-master-dani7ug/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

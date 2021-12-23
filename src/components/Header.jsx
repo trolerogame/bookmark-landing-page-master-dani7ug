@@ -11,7 +11,7 @@ const Header = () => {
     return (
         <ContainInfoHeader close={!close}>
             <div id='buttonLogo'>
-                <Logo color="#fff" color2={close ? '#fff' : ''} color3={close ? 'rgb(40,40,50,.9)' : ''}/>
+                <Logo color={close ? '#fff' : '#222'} color2={close ? '#fff' : ''} color3={close ? 'rgb(40,40,50,.9)' : ''}/>
                 <img src={close ? closeIcon : Hamburger} onClick={() => setClose(!close)}/>
             </div>
             <div id='info'>

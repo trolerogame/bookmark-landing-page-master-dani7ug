@@ -186,6 +186,7 @@ export const ContainCart = styled(ContainDiv)`
 
 export const QuestionStyle = styled.div`
     width: 300px;
+    margin-bottom:10px;
     -webkit-box-shadow: 2px 7px 10px 1px rgba(0,0,0,0.14);
     -moz-box-shadow: 2px 7px 10px 1px rgba(0,0,0,0.14);
     box-shadow: 2px 7px 10px 1px rgba(0,0,0,0.14);
@@ -229,6 +230,7 @@ export const ContainRadio = styled.div`
 `
 
 export const RadioButton = styled.button`
+    background:#fff;
     border:none;
     padding:15px 0;
     font-size:20px;
