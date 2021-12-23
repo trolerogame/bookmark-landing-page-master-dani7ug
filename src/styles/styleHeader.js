@@ -27,6 +27,9 @@ export const ContainInfoHeader = styled.header`
         background:none;
         outline:1px  solid hsl(0, 94%, 66%);
     }
+    #networks{
+        display:none;
+    }
     @media (max-width:762px){
         display: block;
         margin:0;
@@ -44,7 +47,17 @@ export const ContainInfoHeader = styled.header`
             width: 20px;
             height: 20px;
         }
-
+        #networks{
+            display:flex;
+            justify-content: center;
+            margin-top:150px;
+        }
+        #networks img{
+            margin:0 20px;
+            width: 30px;
+            height:30px;
+            object-fit: cover;
+        }
         ${props => !props.close && css`
             display:grid;
             grid-template-columns: 100%;
@@ -53,6 +66,7 @@ export const ContainInfoHeader = styled.header`
             justify-content: center;
             padding:30px;
             position: fixed;
+            z-index:10;
             top:0;
             left:0;
             width: calc(100% - 60px);

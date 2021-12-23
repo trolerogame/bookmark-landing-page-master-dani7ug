@@ -9,10 +9,7 @@ const Body = () => {
     const [num,setNum] = useState(0)
     return (
         <main>
-            <ContainIllustrator>
-                <ContainIllustration>
-                    <img src={illustrationHero} alt="" />
-                </ContainIllustration>
+            <ContainIllustrator reverse>
                 <ContainText>
                     <h2>A Simple Bookmark Manager</h2>
                     <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
@@ -21,6 +18,9 @@ const Body = () => {
                         <ButtonRed color='#f2f2f2'>Get it on Firefox</ButtonRed>
                     </div>
                 </ContainText>
+                <ContainIllustration>
+                    <img src={illustrationHero} alt="" />
+                </ContainIllustration>
             </ContainIllustrator>
             {/* Features */}
             <TextExplain>

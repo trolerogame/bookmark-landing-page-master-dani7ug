@@ -10,8 +10,9 @@ export const ContainForm = styled.form`
     }
     input{
         width:calc(100% - 20px);
-        border:none;
-        outline:${props => props.error ? '1px solid hsl(0, 94%, 66%)' : 'none'};
+        outline:none;
+        border:${props => props.error ? '3px solid hsl(0, 94%, 66%)' : 'none'};
+        border-bottom:${props => props.error ? '25px solid hsl(0, 94%, 66%)' : 'none'};
         border-radius:5px;
         padding:10px 0;
         height:30px;
@@ -29,6 +30,33 @@ export const ContainForm = styled.form`
     p{
         font-size:20px;
         letter-spacing: 5px;
+    }
+    #containInput{
+        position:relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    img{
+        position:absolute;
+        width:20px;
+        height: 20px;
+        object-fit: cover;
+        right:10px;
+        margin-bottom:20px;
+        z-index:1;
+    }
+    #containInput::after{
+        display:block;
+        content:"Whoops, make sure it's an email";
+        position: absolute;
+        font-size:13px;
+        font-weight: bold;
+        bottom:4px;
+        left:10px;
+        color:#f2f2f2;
+        padding:0 2px;
     }
     @media (min-width: 768px) {
         display:flex;
@@ -48,21 +76,11 @@ export const ContainForm = styled.form`
             display:flex;
             align-items: center;
         }
-        #containInput{
-            position:relative;
-        }
-        img{
-            position:absolute;
-            width:30px;
-            height: 30px;
-            object-fit: cover;
-            right:0;
-            z-index:1;
-        }
+
         input,button{
             margin:0;
         }
-        div{
+        #containButtonInput{
             width: 400px;
             display:grid;
             grid-template-columns: 75% 25%;

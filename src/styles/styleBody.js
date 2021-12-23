@@ -68,6 +68,8 @@ export const InfoFooter = styled.footer`
 export const ContainIllustrator = styled.div`
     margin:50px 30px;
     text-align: center;
+    display:flex;
+    flex-direction: ${props => props.reverse ? 'column-reverse' : 'column'};
     img{
         width: 350px;
         height: 250px;
@@ -100,13 +102,13 @@ export const ContainText = styled.div`
     }
     @media (min-width:762px){
         width:400px;
+        margin-left:100px;
     }
 `
 export const ContainIllustration = styled.div`
     position: relative;
     display: flex;
     justify-content: center;
-    z-index: -1;
 `
 
 export const TextExplain = styled.div`
@@ -237,8 +239,8 @@ export const RadioButton = styled.button`
     flex-direction: column;
     align-items: center;
     position: relative;
-    border-top:1px solid hsl(229, 8%, 60%);
-    border-bottom:1px solid hsl(229, 8%, 60%);
+    border-top:1px solid rgb(200,200,200);
+    border-bottom:1px solid rgb(200,200,200);
     &::after{
         content:'';
         display:block;
