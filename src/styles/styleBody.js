@@ -58,7 +58,6 @@ export const InfoFooter = styled.footer`
         img{
             margin:0 10px;
         }
-
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
@@ -74,10 +73,18 @@ export const ContainIllustrator = styled.div`
         height: 250px;
         object-fit: cover;
     }
+    @media (min-width: 762px){
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        place-content: center;
+        text-align: start;
+    }
+`
+export const ContainText = styled.div`
     p{
-        color:hsl(229, 31%, 21%);
-        font-weight: 500;
-        font-size:18px;
+    color:hsl(229, 31%, 21%);
+    font-weight: 500;
+    font-size:18px;
     }
     h2{
         font-size:26px;
@@ -91,10 +98,8 @@ export const ContainIllustrator = styled.div`
         margin:20px 0;
         justify-content:center;
     }
-
-    @media (min-width: 762px){
-        display:flex;
-        text-align: start;
+    @media (min-width:762px){
+        width:400px;
     }
 `
 export const ContainIllustration = styled.div`
@@ -107,6 +112,7 @@ export const ContainIllustration = styled.div`
 export const TextExplain = styled.div`
     display:flex;
     flex-direction: column;
+    align-items: center;
     margin:30px 30px;
     margin-top:90px;
     text-align: center;
@@ -115,5 +121,140 @@ export const TextExplain = styled.div`
     }
     h2{
         font-size:25px;
+    }
+    @media (min-width:682px){
+        width: 350px;
+        margin:40px auto;
+    }
+`
+
+export const CartExtensionStyle = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:280px;
+    margin:30px 0;
+    padding:20px 0;
+    border-radius:15px;
+    -webkit-box-shadow: 2px 7px 10px 1px rgba(0,0,0,0.19);
+    -moz-box-shadow: 2px 7px 10px 1px rgba(0,0,0,0.19);
+    box-shadow: 2px 7px 10px 1px rgba(0,0,0,0.19);
+    b{
+        font-size:23px;
+        margin:20px 0 10px 0;
+    }
+    p{
+        margin:0;
+    }
+    button{
+        margin:50px 0 10px 0!important;
+        padding:20px 40px;
+        display:flex;
+        align-items:center;
+    }
+    @media (min-width: 762px) {
+        margin:0 25px;
+        &:first-child{
+            transform:translateY(-50px);
+        }
+        &:nth-child(3){
+            transform:translateY(50px);
+        }
+    }
+`
+
+export const ContainDiv = styled.div`
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    button{
+        margin:50px 0;
+        height:40px;
+        padding:0 20px;
+    }
+`
+export const ContainCart = styled(ContainDiv)`
+    @media(min-width: 762px){
+        flex-direction:row;
+        justify-content:center;
+        margin:50px 0 150px 0;
+    }
+`
+
+export const QuestionStyle = styled.div`
+    width: 300px;
+    -webkit-box-shadow: 2px 7px 10px 1px rgba(0,0,0,0.14);
+    -moz-box-shadow: 2px 7px 10px 1px rgba(0,0,0,0.14);
+    box-shadow: 2px 7px 10px 1px rgba(0,0,0,0.14);
+    .title{
+        display:flex;
+        justify-content:space-between;
+        align-items: center;
+    }
+    .title p{
+        font-weight:bold;
+    }
+    .text{
+        overflow: hidden;
+        height:${props => props.close ? 'auto' : '0'};
+        transition: all .1s linear;
+    }
+    .text p{
+        letter-spacing:1px;
+        color:#000;
+    }
+    img{
+        width:20px;
+        height:10px;
+        object-fit: cover;
+        cursor:pointer;
+        transform: rotate(${props => props.close ? '-180deg' : '0'});
+        transition: all .1s linear;
+    }
+    @media(min-width: 762px){
+        width:400px;
+    }
+`
+
+export const ContainRadio = styled.div`
+    display:flex;
+    flex-direction: column;
+    @media (min-width: 762px){
+        flex-direction: row;
+        justify-content: center;
+    }
+`
+
+export const RadioButton = styled.button`
+    border:none;
+    padding:15px 0;
+    font-size:20px;
+    color:hsl(229, 31%, 21%);
+    cursor:pointer;
+    transition: all .1s linear;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-top:1px solid hsl(229, 8%, 60%);
+    border-bottom:1px solid hsl(229, 8%, 60%);
+    &::after{
+        content:'';
+        display:block;
+        margin-top:10px;
+        width: ${props => props.num === 'true' ? 'calc(100% - 200px)' : '0'};
+        height:5px ;
+        background-color:hsl(0, 94%, 66%);
+        transition: all .2s linear;
+        position: absolute;
+        bottom:0;
+    }
+    @media (min-width: 762px){
+        padding:15px 40px;
+        border-top:0;
+        &::after{
+            width: ${props => props.num === 'true' ? '100%' : '0'};
+        }
     }
 `
