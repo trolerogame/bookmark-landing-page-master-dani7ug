@@ -48,7 +48,7 @@ export const ContainForm = styled.form`
         z-index:1;
     }
     #containInput::after{
-        display:${props => props.error ? 'none' : 'block'};
+        display:${props => props.error ? 'block' : 'none'};
         content:"Whoops, make sure it's an email";
         position: absolute;
         font-size:13px;
