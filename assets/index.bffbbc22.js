@@ -170,9 +170,6 @@ var C=Object.defineProperty,I=Object.defineProperties;var S=Object.getOwnPropert
 `,B=r.div`
     width: 300px;
     margin-bottom:10px;
-    -webkit-box-shadow: 2px 7px 10px 1px rgba(0,0,0,0.14);
-    -moz-box-shadow: 2px 7px 10px 1px rgba(0,0,0,0.14);
-    box-shadow: 2px 7px 10px 1px rgba(0,0,0,0.14);
     .title{
         display:flex;
         justify-content:space-between;
@@ -288,7 +285,7 @@ var C=Object.defineProperty,I=Object.defineProperties;var S=Object.getOwnPropert
         z-index:1;
     }
     #containInput::after{
-        display:${t=>t.error?"none":"block"};
+        display:${t=>t.error?"block":"none"};
         content:"Whoops, make sure it's an email";
         position: absolute;
         font-size:13px;
